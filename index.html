@@ -20,18 +20,35 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   </head>
   <body>
-    <!-- <div id="root"></div> -->
-    <div class="car">
+    <div id="root"></div>
+    <!-- <div class="car">
         <h3>Ford Focus</h3>
         <p>Year: <strong>2017</strong></p>
     </div>
 
     <div class="car">
             <h3>Audi A8</h3>
-            <p>Year: <strong>2015</strong></p>
-        </div>
-
+            <p>Year: <strong>2015</strong></p> -->
+        </div> 
+        <!-- // видим, что  -->
+        <!-- //для создания еще одного элемента кол-во кода увеличивается  -->
+    
     <script type="text/babel">
+
+        function Car() {
+            return (
+                <div className="car">
+                    <h3>Ford Focus</h3>
+                    <p>Year: <strong>2017</strong></p>
+                </div>
+            )
+        }
+
+        ReactDOM.render(
+            <Car/>, // указываем тег 
+            document.getElementById('root')
+            );
+
 
       /* ReactDOM.render(
         <h1>Hello, world!</h1>,
