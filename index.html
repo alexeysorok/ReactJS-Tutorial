@@ -35,17 +35,17 @@
     
     <script type="text/babel">
 
-        function Car() {
+        function Car(props) {
             return (
                 <div className="car">
-                    <h3>Ford Focus</h3>
-                    <p>Year: <strong>2017</strong></p>
+                    <h3>{props.name}</h3>
+                    <p>Year: <strong>{props.year}</strong></p>
                 </div>
             )
         }
 
         ReactDOM.render(
-            <Car/>, // указываем тег 
+            <Car name="Ford Focus" year="2015"/>, // указываем тег 
             document.getElementById('root')
             );
 
