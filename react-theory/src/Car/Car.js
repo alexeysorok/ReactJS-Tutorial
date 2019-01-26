@@ -6,10 +6,12 @@ import React from 'react';
 //     )
 // }
 
-const car = () => {
-    return (
-        <h2>This is car component</h2>
-    )
-}
+// const car = () => {
+//     return (
+//         <h2>This is car component</h2>
+//     )
+// }
+
+const car = () => <h2>This is car component</h2>
 
 export default car
