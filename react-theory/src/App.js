@@ -7,9 +7,10 @@ class App extends Component {
     const divStyle = {
       textAlign : 'center'
     }
+    
     return (
       <div style={divStyle}>
-      <h1 style={{color: 'blue', fontSize: '30px'}} >Hello World!</h1>
+      <h1>Hello World!</h1>
         
       </div>
     );
