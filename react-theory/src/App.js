@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Car from './Car/Car';
 
-class App extends Component {
+class App extends Component { 
 
   state = {
     cars: [
@@ -13,16 +13,18 @@ class App extends Component {
     pageTitle: 'React Components'
   }
 
-  changeTitleHandle1() {
+  // changeTitleHandle1() {
+  // способ записи функции
+  // }
 
-  }
-  changeTitleHandle = () =>{
+  changeTitleHandle = (newTitle) =>{
     // console.log('Clicked')
-    const  oldTitle = this.state.pageTitle
-    const newTitle = oldTitle + '(changed)'
-    this.setState(
-      {pageTitle: newTitle} // заново будет вызван render
-    )
+    // const  oldTitle = this.state.pageTitle
+    // const newTitle = oldTitle + '(changed)'
+    this.setState({
+      pageTitle: newTitle
+    }) // заново будет вызван render
+    
   }
 
   
@@ -39,15 +41,18 @@ class App extends Component {
       <div style={divStyle}>
       <h1>{this.state.pageTitle}</h1>
 
-      <button onClick={this.changeTitleHandle}>Change title</button>
+      <button onClick={this.changeTitleHandle.bind(this, 'Changed!')}>Change title</button>
         
      
 
        <Car 
         name={cars[0].name}
         year={cars[0].year}
-        onChangeTitle={this.changeTitleHandle}/> 
-       <Car name={'Audi'} year={2017}/>
+        onChangeTitle={this.changeTitleHandle.bind(this, cars[0].name)}/> 
+       <Car 
+        name={'Audi'} year={2017}
+        onChangeTitle={() => this.changeTitleHandle('Cars')} // этот метод больше расходует память 
+       />
        
        
       </div>
