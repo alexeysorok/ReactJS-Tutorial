@@ -13,6 +13,13 @@ class App extends Component {
     pageTitle: 'React Components'
   }
 
+  changeTitleHandle1() {
+
+  }
+  changeTitleHandle = () =>{
+    console.log('Clicked')
+  }
+
   
 
 
@@ -26,6 +33,8 @@ class App extends Component {
     return (
       <div style={divStyle}>
       <h1>{this.state.pageTitle}</h1>
+
+      <button onClick={this.changeTitleHandle}>Change title</button>
         
      
 
