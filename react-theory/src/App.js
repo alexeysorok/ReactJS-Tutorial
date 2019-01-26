@@ -9,7 +9,8 @@ class App extends Component {
     cars: [
       {name: 'Ford', year: 2018},
       {name: 'Audi', year: 2017}
-    ]
+    ],
+    pageTitle: 'React Components'
   }
 
   
@@ -24,7 +25,7 @@ class App extends Component {
 
     return (
       <div style={divStyle}>
-      <h1>Hello World!</h1>
+      <h1>{this.state.pageTitle}</h1>
         
      
 
