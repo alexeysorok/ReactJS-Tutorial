@@ -27,7 +27,9 @@ class App extends Component {
     
   }
 
-  
+  handleInput = () =>{
+    console.log('Changed')
+  }
 
 
   render() {
@@ -40,6 +42,8 @@ class App extends Component {
     return (
       <div style={divStyle}>
       <h1>{this.state.pageTitle}</h1>
+
+      <input type="text" onChange={this.handleInput}></input>
 
       <button onClick={this.changeTitleHandle.bind(this, 'Changed!')}>Change title</button>
         
