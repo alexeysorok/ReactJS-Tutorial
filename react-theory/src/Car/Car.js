@@ -1,8 +1,15 @@
 import React from 'react';
-function Car () {
+
+// function Car () {
+//     return (
+//         <h2>This is car component</h2>
+//     )
+// }
+
+const car = () => {
     return (
         <h2>This is car component</h2>
     )
 }
 
-export default Car
+export default car
