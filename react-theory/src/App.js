@@ -21,7 +21,7 @@ class App extends Component {
     const  oldTitle = this.state.pageTitle
     const newTitle = oldTitle + '(changed)'
     this.setState(
-      {pageTitle: newTitle}
+      {pageTitle: newTitle} // заново будет вызван render
     )
   }
 
@@ -43,7 +43,10 @@ class App extends Component {
         
      
 
-       <Car name={cars[0].name} year={cars[0].year}/> 
+       <Car 
+        name={cars[0].name}
+        year={cars[0].year}
+        onChangeTitle={this.changeTitleHandle}/> 
        <Car name={'Audi'} year={2017}/>
        
        
