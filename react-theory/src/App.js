@@ -27,8 +27,8 @@ class App extends Component {
     
   }
 
-  handleInput = () =>{
-    console.log('Changed')
+  handleInput = (event) =>{
+    console.log('Changed', event.target.value)
   }
 
 
