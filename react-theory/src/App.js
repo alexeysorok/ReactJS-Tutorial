@@ -29,6 +29,9 @@ class App extends Component {
 
   handleInput = (event) =>{
     console.log('Changed', event.target.value)
+    this.setState({
+      pageTitle : event.target.value
+    })
   }
 
 
@@ -37,7 +40,7 @@ class App extends Component {
       textAlign : 'center'
     }
 
-    const cars = this.state.cars
+    // const cars = this.state.cars
 
     return (
       <div style={divStyle}>
@@ -47,16 +50,27 @@ class App extends Component {
 
       <button onClick={this.changeTitleHandle.bind(this, 'Changed!')}>Change title</button>
         
-     
+      {this.state.cars.map((car, index) => {
+        return (
+          <Car key={index}
+          name={car.name}
+          year={car.year}
+          onChangeTitle={() => this.changeTitleHandle(car.name) }>
+            
+          </Car>
+        )
+      }) }
 
-       <Car 
+
+
+       {/* <Car 
         name={cars[0].name}
         year={cars[0].year}
         onChangeTitle={this.changeTitleHandle.bind(this, cars[0].name)}/> 
        <Car 
         name={'Audi'} year={2017}
         onChangeTitle={() => this.changeTitleHandle(cars[1].name)} // этот метод больше расходует память 
-       />
+       /> */}
        
        
       </div>
