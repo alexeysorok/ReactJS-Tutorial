@@ -12,12 +12,20 @@ import React from 'react';
 //     )
 // }
 
-const car = () => (
-<div>
-    This is car component
-    <strong>test</strong>
+// const car = () => (
+// <div>
+//     This is car component
+//     <strong> test</strong>
 
-</div>
+// </div>
+// )
+
+
+
+export default () => (
+    <div>
+     This is car component
+     <strong> test</strong>
+
+    </div>
 )
-
-export default car
