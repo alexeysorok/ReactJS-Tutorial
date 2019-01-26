@@ -14,7 +14,9 @@ class App extends Component {
       <h1>Hello World!</h1>
         
        <Car name={'Ford'} year={2018}/> 
-       <Car name={'Audi'} year={2017}/>
+       <Car name={'Audi'} year={2017}>
+       <p style={{color: 'red'}}>COLOR</p>
+       </Car>
       </div>
     );
     // return React.createElement(
