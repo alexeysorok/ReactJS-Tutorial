@@ -13,8 +13,8 @@ class App extends Component {
       <div style={divStyle}>
       <h1>Hello World!</h1>
         
-       <Car/> 
-       <Car/>
+       <Car name={'Ford'} year={2018}/> 
+       <Car name={'Audi'} year={2017}/>
       </div>
     );
     // return React.createElement(
