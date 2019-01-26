@@ -4,8 +4,11 @@ import './App.css';
 
 class App extends Component {
   render() {
+    const divStyle = {
+      'text-align' : 'center'
+    }
     return (
-      <div className="App">
+      <div style={divStyle}>
       <h1>Hello World!</h1>
         
       </div>
