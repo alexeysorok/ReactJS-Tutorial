@@ -51,7 +51,7 @@ class App extends Component {
         onChangeTitle={this.changeTitleHandle.bind(this, cars[0].name)}/> 
        <Car 
         name={'Audi'} year={2017}
-        onChangeTitle={() => this.changeTitleHandle('Cars')} // этот метод больше расходует память 
+        onChangeTitle={() => this.changeTitleHandle(cars[1].name)} // этот метод больше расходует память 
        />
        
        
