@@ -22,17 +22,29 @@ class App extends Component {
     // const  oldTitle = this.state.pageTitle
     // const newTitle = oldTitle + '(changed)'
     this.setState({
-      pageTitle: newTitle
+      pageTitle: newTitle,
+      showCars: false
     }) // заново будет вызван render
     
   }
 
-  handleInput = (event) =>{
-    console.log('Changed', event.target.value)
-    this.setState({
-      pageTitle : event.target.value
-    })
-  }
+  // handleInput = (event) =>{
+  //   console.log('Changed', event.target.value)
+  //   this.setState({
+  //     pageTitle : event.target.value
+  //   })
+  // }
+
+  // удалить элемент из списка *
+  deleteHandler(index) {
+    const cars = this.state.cars.concat() //создается копия массива
+    cars.splice(index, 1)
+
+    this.setState({cars})
+
+
+  } 
+
 
 
   render() {
@@ -46,15 +58,19 @@ class App extends Component {
       <div style={divStyle}>
       <h1>{this.state.pageTitle}</h1>
 
-      <input type="text" onChange={this.handleInput}></input>
+      {/* <input type="text" onChange={this.handleInput}></input> */}
 
-      <button onClick={this.changeTitleHandle.bind(this, 'Changed!')}>Change title</button>
-        
+      <button onClick={this.changeTitleHandle.bind(this, 'Changed!')}
+      >Change title</button>
+
+      
+     
       {this.state.cars.map((car, index) => {
         return (
           <Car key={index}
           name={car.name}
           year={car.year}
+          onDelete={this.deleteHandler.bind(this, index)}
           onChangeTitle={() => this.changeTitleHandle(car.name) }>
             
           </Car>
